@@ -1,0 +1,315 @@
+/*
+Author: Jenn Woldt
+Today's Date: 11/16/24
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color:mediumpurple;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    padding: 0% 2%; 
+}
+#latest{
+    padding: 0% 20%;
+}
+video {
+    max-width: 100%;
+    display: block;
+    padding: 0% 10%; 
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rule show mobile class and hide tab-desk class */
+.mobile, .mobile-tablet{
+    display: block;
+}
+
+.tab-desk, .desktop{
+    display: none;
+}
+
+
+/* Style rules for header area */
+.mobile h1, .mobile h3 {
+    padding: 2%;
+    text-align: center;
+}
+
+.mobile h1 {
+    font-family: 'Emblema One', cursive;
+}
+
+.mobile h3 {
+    font-family: 'Lora', serif;
+}
+
+/* Style rules for navigation area */
+nav {
+    background-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    font-size: 1.5em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-top: 0.5px solid rgb(117, 70, 117);
+}
+
+nav li a {
+    display: block;
+    color: rgb(117, 70, 117);
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+/* Style rules for main content */
+main {
+    padding: 2% 15%;
+    font-family: 'Lora', serif;
+}
+
+main p {
+    font-size: 1.25em;
+    padding: 0% 15%;
+}
+main h1{
+    padding: 0% 22%;
+}
+main h2{
+    padding: 0% 15%;
+
+}
+
+main h3 {
+    padding-top: 2%;
+}
+
+main ul {
+    list-style-type: square;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.round {
+    border-radius: 6px;
+}
+
+#info ul {
+    margin-left: 10%;
+}
+
+#contact, #form h2{
+    text-align: center;
+}
+
+.tel-link {
+    background-color: rgb(104, 61, 104);
+    padding: 2%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tel-link a {
+    color: rgb(117, 70, 117);
+    text-decoration: none;
+    font-weight: bold;
+}
+/*Style Rules for form elements*/
+fieldset, input, legend{
+    margin-bottom: 2%;
+}
+
+label{
+    display: block;
+    padding-top: 2%;
+}
+
+#submit, #reset{
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: white;
+    color: rgb(117, 70, 117);
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    background-color: rgb(104, 61, 104);
+    color: white;
+    padding: 1% 0;
+}
+
+footer a {
+    color: rgb(117, 70, 117);
+    text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px), print {
+ 
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+    .tab-desk {
+        display: block;
+        padding: 0% 30%;
+       
+    }
+    .mobile-tablet{
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.25em;
+    }
+    
+    nav li a {
+        padding: 0.5em;
+    }
+          
+    /*Tablet Viewport: style rule for form element*/
+    form{
+        width: 70%;
+        margin: 0 auto;
+    }
+   
+    caption{
+        font-size: 1em;
+        font-weight: bold;
+        padding: 1%;
+        color: white;
+    }
+
+    th{
+        border: 10px solid black;
+        padding: 0%;
+        background-color:darkslateblue;
+        color: white;
+        font-size: 40px;      
+    }
+
+    td{
+        border: 10px solid black;
+        padding: 0%;
+        color: white;
+        font-size: 30px;      
+    }
+
+    tr:nth-of-type(odd){
+        background-color: black;
+        color: white;
+    }    
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+    
+    /* Desktop Viewport: Show desktop class, hide mobile-tablet class. */
+    nav li {
+        font-size: 1.5em;
+    }
+    
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+    
+    nav li a:hover {
+        color: rgb(104, 61, 104);
+        background-color: white;
+        opacity: 0.5;
+    }
+    .desktop{
+        display: block;
+    }
+    .mobile-tablet{
+        display: none;
+    }
+    
+    
+    /* Desktop Viewport: Style rules for main content */
+    #info ul {
+        margin-left: 5%;
+    }
+      
+     /*Style rules for table*/
+     table{
+        border: 1px solid rgb(0, 0, 0); 
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 4em;
+        width: auto;
+    }
+    /*Desktop Viewport: style rules for form elements*/
+    form{
+        width: auto;
+    }
+    .form-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+    #btn{
+        grid-column: 1 / span 2;
+    }
+    
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px), print {
+    
+    body {
+        background: linear-gradient(rgb(104, 61, 104), black);
+    }
+    
+    #wrapper {
+        width: 1920px;
+        margin: 0 auto;
+    }
+        
+    main {
+        background-color: rgb(104, 61, 104);
+    }
+    
+}
+
+/* Media Query for Print */
+@media print {
+    
+    body {
+        background-color:rgb(104, 61, 104);
+        color: #000;
+    }
+    
+}
